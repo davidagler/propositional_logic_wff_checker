@@ -13,4 +13,4 @@ Program returns an error message if input violates one of the above checks.
 
 ## Known Error
 
-Program will say that PQ is not a wff but PP is a wff.
+Program will incorrectly say that PQ is not a wff but PP is a wff.

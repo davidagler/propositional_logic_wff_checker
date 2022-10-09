@@ -4,10 +4,6 @@ def ConvertToList(string):
     str_list[:0] = string    
     return str_list
 
-#User Input 
-wff = input('WFF: ')# gets user input, converts to upper case, returns string
-user_list = ConvertToList(wff) #converts user input to list
-
 # Merge items on list to form -> and <->
 def merge_conditional(list):
     for i in list:
@@ -33,11 +29,15 @@ def merge_biconditional(list):
                 break
     return list
 
+#User Input 
+wff = input('WFF: ')# gets user input, converts to upper case, returns string
+user_list = ConvertToList(wff) #converts user input to list
+
 merge_conditional(user_list)
 merge_biconditional(user_list)
 
 user_list_index = [] # list of the indices of all characters
-user_list_enumerated = list(enumerate(user_list))#list of characters of user input with its index number
+user_list_enumerated = list(enumerate(user_list))#list of (index number, user input character)
 
 # Error List
 error_list = [] # list that we append strings of error statements.
@@ -65,7 +65,6 @@ def check_characters():
 # CHECK FOR DOUBLE LETTERS:
 def check_propositional_letters():
     for x, y in user_list_enumerated:
-        print(x,y)
         if y in accept_letters:
             x+=1        
             y = user_list_enumerated[x][0]
@@ -93,10 +92,6 @@ def check_paren_size():
         error_list.append('You are missing a parenthesis')
 
 # CHECK PARENTHESES - STEP 2. Check LEFT AND RIGHT ORDER
-#No idea how to get NEC and SUF conditions if paren are always correct. So, let's just throw a bunch of necessary conditions:
-
-# UPDATE: This needs to be revised. I'm only checking the char to the right. I should also check to the left. In the case of the right paren, I'm only checking to the left. (()) will pass as wff
-
 def check_left_paren():
     for x, y in user_list_enumerated:
         if y == '(':
