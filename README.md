@@ -7,7 +7,7 @@ Script to check if a formula in propositional logic (PL) is a well-formed formul
 - for an equal number of left and right parentheses
 - that parentheses are used correctly
 - if negation $\neg$ is used correctly
-- if the truth-functional operators $\wedge, \vee, \rightarrow, \leftrightarrow$ are used correctly
+- if the truth-functional operators $\wedge, \vee, \rightarrow, \leftrightarrow$ are used correctly.
 
 Program returns an error message if input violates one of the above checks.
 
