@@ -12,7 +12,6 @@ def merge_conditional(list):
             if r != 0:
                 if list[r-1] == '-':
                     list[r-1:r+1] = [''.join(list[r-1:r+1])]                    
-                    print(list)
             else:                
                 break
     return list
@@ -24,7 +23,6 @@ def merge_biconditional(list):
             if r != 0:
                 if list[r-1] == '<':
                     list[r-1:r+1] = [''.join(list[r-1:r+1])]                    
-                    print(list)
             else:                
                 break
     return list
@@ -67,7 +65,6 @@ def check_propositional_letters():
     for x, y in user_list_enumerated:
         if y in accept_letters:
             x+=1        
-            y = user_list_enumerated[x][0]
             if x < len(user_list_enumerated):
                 if y in accept_letters:
                     error_list.append(f"There is a problem with your use of propositional letters. You likely have two letters next to each other.")

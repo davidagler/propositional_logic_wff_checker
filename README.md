@@ -10,7 +10,3 @@ Script to check if a formula in propositional logic (PL) is a well-formed formul
 - if the truth-functional operators $\wedge, \vee, \rightarrow, \leftrightarrow$ are used correctly.
 
 Program returns an error message if input violates one of the above checks.
-
-## Known Error
-
-Program will incorrectly say that PQ is not a wff but PP is a wff.
